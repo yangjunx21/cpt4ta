@@ -1,0 +1,15 @@
+  0%|                                                                                               | 0/927 [00:00<?, ?it/s]/data/yangjunxiao/anaconda3/envs/env38/lib/python3.8/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/data/yangjunxiao/anaconda3/envs/env38/lib/python3.8/site-packages/torch/autograd/__init__.py:266: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at ../torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/data/yangjunxiao/anaconda3/envs/env38/lib/python3.8/site-packages/deepspeed/runtime/zero/stage3.py:1274: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  total_norm_cuda = get_accelerator().FloatTensor([float(total_norm)])
+  0%|                                                                                     | 1/927 [00:24<6:12:53, 24.16s/it]
+
+  0%|▏                                                                                    | 2/927 [00:44<5:35:43, 21.78s/it]
+
+  0%|▎                                                                                    | 3/927 [01:02<5:12:05, 20.27s/it]
+
+  0%|▎                                                                                    | 4/927 [01:21<5:02:46, 19.68s/it]
+{'loss': 1.6875, 'grad_norm': 3.5276115860751407, 'learning_rate': 1.9999081194442435e-05, 'epoch': 0.0}
+

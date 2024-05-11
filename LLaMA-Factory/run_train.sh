@@ -1,0 +1,23 @@
+deepspeed --include localhost:4,5,6,7 --master_port=9901 src/train_bash.py \
+    --deepspeed ds_config.json \
+    --stage pt \
+    --do_train \
+    --model_name_or_path /data/yangjunxiao/huggingface_pretrained_models/ChatGLM3/model/chatglm3-6b-base \
+    --dataset open-web-math_30000\
+    --finetuning_type full \
+    --output_dir /data/yangjunxiao/ai4ta/continue_pretraining/models/open-web-math_30000 \
+    --overwrite_output_dir true \
+    --overwrite_cache \
+    --per_device_train_batch_size 8 \
+    --gradient_accumulation_steps 1 \
+    --lr_scheduler_type cosine \
+    --warmup_steps 0\
+    --logging_steps 1 \
+    --save_total_limit 3 \
+    --learning_rate 3e-6 \
+    --num_train_epochs 1.0 \
+    --plot_loss \
+    --bf16 true \
+    --logging_dir ./log \
+    --cutoff_len 4096 \
+    --save_steps 5000 
